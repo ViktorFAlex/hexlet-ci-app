@@ -15,4 +15,7 @@ test:
 lint:
 	npx eslint .
 
+say-hello:
+	echo Hello, World!
+
 .PHONY: build

@@ -1,0 +1,18 @@
+name: hexlet-ci
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run make setup
+      - run make start
+      - run make lint
+      - name: run tests
+	run: npm test
+   log:
+     needs: build
+     steps: 
+     - run make say-hello
