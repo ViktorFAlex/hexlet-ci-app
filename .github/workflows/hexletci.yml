@@ -11,8 +11,8 @@ jobs:
       - run make start
       - run make lint
       - name: run tests
-	run: npm test
+	run: make test
    log:
      needs: build
      steps: 
-     - run make say-hello
+     - run: make say-hello
